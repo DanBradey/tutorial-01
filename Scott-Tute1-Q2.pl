@@ -11,8 +11,7 @@ my $weekDay;
 my $firstMonday = int(rand(7) + 1);
 #print "$firstMonday\n";
 print "What date would you like to know the day for? ";
-my $userDay = <STDIN>;
-chomp ($userDay);
+chomp (my $userDay = <STDIN>);
 die ("ERROR: The number you have entered is outside the bounds of any known month!\n") 
   if ($userDay < 1 || $userDay > 31);
 warn "Date may be outside the bound of the current month!\n" if ($userDay > 28 && $userDay < 32);
